@@ -46,7 +46,7 @@ export default function ContactoPage() {
                     </div>
                     <h4 className="font-semibold mb-1">Deivith Zanella</h4>
                     <p className="text-sm text-gray-600 mb-2">Desarrollador</p>
-                    <p className="text-xs text-gray-500">...</p>
+                    <p className="text-xs text-gray-500">correoserio29112002@gmail.com</p>
                   </CardContent>
                 </Card>
               </div>
