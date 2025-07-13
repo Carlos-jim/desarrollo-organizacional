@@ -98,6 +98,20 @@ export const nucleosTematicos = [
       icono: Target,
       descripcion: "Etapas y metodologías del proceso de desarrollo",
       color: "bg-blue-500",
+      competencias: [
+          "Relacionar el cambio con el desarrollo organizacional a través de su manejo en las organizaciones.",
+      ],
+      contenido_programatico: [
+        "Naturaleza de los cambios. y concepto.",
+        "Cambios en el sistema orgánico.",
+        "Cambios en el campo de fuerza.",
+        "El proceso de cambio en las organizaciones.",
+        "Fases del cambio.",
+        "Ciclos del cambio en los sistemas abiertos.",
+        "Cambios y comportamiento humano.",
+        "Resistencia al cambio.",
+        "Requisitos para el cambio planeado eficazmente.",
+      ],
       actividades: [
       {
         tipo: "Mapa Conceptual",
@@ -127,18 +141,14 @@ export const nucleosTematicos = [
       descripcion: "Evolución histórica y pioneros de la disciplina",
       color: "bg-blue-500",
       competencias: [
-          "Relacionar el cambio con el desarrollo organizacional a través de su manejo en las organizaciones.",
+          "Describir el término de desarrollo organizacional y el papel del ejecutivo de talento humano a través de su historia.",
       ],
       contenido_programatico: [
-        "Naturaleza de los cambios. y concepto.",
-        "Cambios en el sistema orgánico.",
-        "Cambios en el campo de fuerza.",
-        "El proceso de cambio en las organizaciones.",
-        "Fases del cambio.",
-        "Ciclos del cambio en los sistemas abiertos.",
-        "Cambios y comportamiento humano.",
-        "Resistencia al cambio.",
-        "Requisitos para el cambio planeado eficazmente.",
+        "Breve historia de la evolución del desarrollo organizacional.  de los cambios. y concepto.",
+        "Entrenamiento en laboratorios de sensibilización.",
+        "Los grupos “T”",
+        "Tendencias del desarrollo organizacional.",
+        "El papel del ejecutivo de talento humano.",
       ],
       actividades: [
       {
@@ -169,18 +179,13 @@ export const nucleosTematicos = [
       descripcion: "Teorías y enfoques tradicionales del DO",
       color: "bg-blue-500",
       competencias: [
-          "Relacionar el cambio con el desarrollo organizacional a través de su manejo en las organizaciones.",
+          "Describir los distintos enfoques clásicos del desarrollo organizacional considerando sus beneficios y contras en la actualidad.",
       ],
       contenido_programatico: [
-        "Naturaleza de los cambios. y concepto.",
-        "Cambios en el sistema orgánico.",
-        "Cambios en el campo de fuerza.",
-        "El proceso de cambio en las organizaciones.",
-        "Fases del cambio.",
-        "Ciclos del cambio en los sistemas abiertos.",
-        "Cambios y comportamiento humano.",
-        "Resistencia al cambio.",
-        "Requisitos para el cambio planeado eficazmente.",
+        "El desarrollo organizacional desde el punto de vista sistémico.",
+        "El desarrollo organizacional desde el punto de vista clásico. ",
+        "Características de los enfoques del desarrollo organizacional.",
+        "Ventajas y desventajas.",
       ],
       actividades: [
       {
@@ -211,18 +216,12 @@ export const nucleosTematicos = [
       descripcion: "Técnicas y herramientas de intervención organizacional",
       color: "bg-blue-500",
       competencias: [
-          "Relacionar el cambio con el desarrollo organizacional a través de su manejo en las organizaciones.",
+          "Identificar las diferentes estrategias existentes para el trabajo en equipo en las organizaciones.",
       ],
       contenido_programatico: [
-        "Naturaleza de los cambios. y concepto.",
-        "Cambios en el sistema orgánico.",
-        "Cambios en el campo de fuerza.",
-        "El proceso de cambio en las organizaciones.",
-        "Fases del cambio.",
-        "Ciclos del cambio en los sistemas abiertos.",
-        "Cambios y comportamiento humano.",
-        "Resistencia al cambio.",
-        "Requisitos para el cambio planeado eficazmente.",
+        "Estrategias dirigidas a los individuos.",
+        "Estrategias dirigidas a grupos ( importancia, formación, creación y facilitación)",
+        "Estrategias dirigidas a estructuras y al sistema total.",
       ],
       actividades: [
       {
@@ -253,18 +252,13 @@ export const nucleosTematicos = [
       descripcion: "Métodos de diagnóstico y medición de la salud organizacional",
       color: "bg-blue-500",
       competencias: [
-          "Relacionar el cambio con el desarrollo organizacional a través de su manejo en las organizaciones.",
+          "Análisis del desarrollo organizacional a través del diagnóstico, investigación e intervención que permitan medir la salud a la organización",
       ],
       contenido_programatico: [
-        "Naturaleza de los cambios. y concepto.",
-        "Cambios en el sistema orgánico.",
-        "Cambios en el campo de fuerza.",
-        "El proceso de cambio en las organizaciones.",
-        "Fases del cambio.",
-        "Ciclos del cambio en los sistemas abiertos.",
-        "Cambios y comportamiento humano.",
-        "Resistencia al cambio.",
-        "Requisitos para el cambio planeado eficazmente.",
+        "Diagnóstico del desarrollo organizacional: Especificidad del tema. Características del tema.",
+        "Naturaleza del tema.",
+        "Justificación del tema.",
+        "Desarrollo.",
       ],
       actividades: [
       {
