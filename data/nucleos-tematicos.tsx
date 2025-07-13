@@ -32,7 +32,7 @@ export const nucleosTematicos = [
       {
         tipo: "Mapa Conceptual",
         descripcion: "Mapa del concepto de desarrollo organizacional",
-        contenido: "/images/Introduccion-al-desarrollo-organizacional.png",
+        contenido: "/images/mapa-intro.png",
       },
       {
         tipo: "Cuestionario",
@@ -259,6 +259,7 @@ export const nucleosTematicos = [
         "Naturaleza del tema.",
         "Justificación del tema.",
         "Desarrollo.",
+        "Estudio de viabilidad.",
       ],
       actividades: [
       {
