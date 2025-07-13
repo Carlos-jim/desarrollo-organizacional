@@ -32,7 +32,7 @@ export const nucleosTematicos = [
       {
         tipo: "Mapa Conceptual",
         descripcion: "Mapa del concepto de desarrollo organizacional",
-        contenido: "/images/mapa-intro.png",
+        contenido: "/images/Introduccion-al-desarrollo-organizacional.png",
       },
       {
         tipo: "Cuestionario",
@@ -74,7 +74,7 @@ export const nucleosTematicos = [
       {
         tipo: "Mapa Conceptual",
         descripcion: "Mapa del concepto de desarrollo organizacional",
-        contenido: "/images/mapa-intro.png",
+        contenido: "/images/gestion-del-cambio-en-las-organizaciones.png",
       },
       {
         tipo: "Cuestionario",
@@ -116,7 +116,7 @@ export const nucleosTematicos = [
       {
         tipo: "Mapa Conceptual",
         descripcion: "Mapa del concepto de desarrollo organizacional",
-        contenido: "/images/mapa-intro.png",
+        contenido: "/images/fases-del-desarrollo-organizacional.png",
       },
       {
         tipo: "Cuestionario",
@@ -154,7 +154,7 @@ export const nucleosTematicos = [
       {
         tipo: "Mapa Conceptual",
         descripcion: "Mapa del concepto de desarrollo organizacional",
-        contenido: "/images/mapa-intro.png",
+        contenido: "/images/historia-del-DO.png",
       },
       {
         tipo: "Cuestionario",
@@ -191,7 +191,7 @@ export const nucleosTematicos = [
       {
         tipo: "Mapa Conceptual",
         descripcion: "Mapa del concepto de desarrollo organizacional",
-        contenido: "/images/mapa-intro.png",
+        contenido: "/images/enfoques-desarrollo-organizacional.png",
       },
       {
         tipo: "Cuestionario",
@@ -227,7 +227,7 @@ export const nucleosTematicos = [
       {
         tipo: "Mapa Conceptual",
         descripcion: "Mapa del concepto de desarrollo organizacional",
-        contenido: "/images/mapa-intro.png",
+        contenido: "/images/estrategias-del-DO.png",
       },
       {
         tipo: "Cuestionario",
@@ -265,7 +265,7 @@ export const nucleosTematicos = [
       {
         tipo: "Mapa Conceptual",
         descripcion: "Mapa del concepto de desarrollo organizacional",
-        contenido: "/images/mapa-intro.png",
+        contenido: "/images/diagnostico-organizacional.png",
       },
       {
         tipo: "Cuestionario",
@@ -307,7 +307,7 @@ export const nucleosTematicos = [
       {
         tipo: "Mapa Conceptual",
         descripcion: "Mapa del concepto de desarrollo organizacional",
-        contenido: "/images/mapa-intro.png",
+        contenido: "/images/Modelo-de-consultoria.png",
       },
       {
         tipo: "Cuestionario",
