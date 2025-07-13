@@ -56,6 +56,20 @@ export const nucleosTematicos = [
       icono: TrendingUp,
       descripcion: "Procesos y gestión del cambio en las organizaciones",
       color: "bg-blue-500",
+      competencias: [
+          "Relacionar el cambio con el desarrollo organizacional a través de su manejo en las organizaciones.",
+      ],
+      contenido_programatico: [
+        "Naturaleza de los cambios. y concepto.",
+        "Cambios en el sistema orgánico.",
+        "Cambios en el campo de fuerza.",
+        "El proceso de cambio en las organizaciones.",
+        "Fases del cambio.",
+        "Ciclos del cambio en los sistemas abiertos.",
+        "Cambios y comportamiento humano.",
+        "Resistencia al cambio.",
+        "Requisitos para el cambio planeado eficazmente.",
+      ],
       actividades: [
       {
         tipo: "Mapa Conceptual",
@@ -112,6 +126,20 @@ export const nucleosTematicos = [
       icono: History,
       descripcion: "Evolución histórica y pioneros de la disciplina",
       color: "bg-blue-500",
+      competencias: [
+          "Relacionar el cambio con el desarrollo organizacional a través de su manejo en las organizaciones.",
+      ],
+      contenido_programatico: [
+        "Naturaleza de los cambios. y concepto.",
+        "Cambios en el sistema orgánico.",
+        "Cambios en el campo de fuerza.",
+        "El proceso de cambio en las organizaciones.",
+        "Fases del cambio.",
+        "Ciclos del cambio en los sistemas abiertos.",
+        "Cambios y comportamiento humano.",
+        "Resistencia al cambio.",
+        "Requisitos para el cambio planeado eficazmente.",
+      ],
       actividades: [
       {
         tipo: "Mapa Conceptual",
@@ -140,6 +168,20 @@ export const nucleosTematicos = [
       icono: Lightbulb,
       descripcion: "Teorías y enfoques tradicionales del DO",
       color: "bg-blue-500",
+      competencias: [
+          "Relacionar el cambio con el desarrollo organizacional a través de su manejo en las organizaciones.",
+      ],
+      contenido_programatico: [
+        "Naturaleza de los cambios. y concepto.",
+        "Cambios en el sistema orgánico.",
+        "Cambios en el campo de fuerza.",
+        "El proceso de cambio en las organizaciones.",
+        "Fases del cambio.",
+        "Ciclos del cambio en los sistemas abiertos.",
+        "Cambios y comportamiento humano.",
+        "Resistencia al cambio.",
+        "Requisitos para el cambio planeado eficazmente.",
+      ],
       actividades: [
       {
         tipo: "Mapa Conceptual",
@@ -168,6 +210,20 @@ export const nucleosTematicos = [
       icono: Users,
       descripcion: "Técnicas y herramientas de intervención organizacional",
       color: "bg-blue-500",
+      competencias: [
+          "Relacionar el cambio con el desarrollo organizacional a través de su manejo en las organizaciones.",
+      ],
+      contenido_programatico: [
+        "Naturaleza de los cambios. y concepto.",
+        "Cambios en el sistema orgánico.",
+        "Cambios en el campo de fuerza.",
+        "El proceso de cambio en las organizaciones.",
+        "Fases del cambio.",
+        "Ciclos del cambio en los sistemas abiertos.",
+        "Cambios y comportamiento humano.",
+        "Resistencia al cambio.",
+        "Requisitos para el cambio planeado eficazmente.",
+      ],
       actividades: [
       {
         tipo: "Mapa Conceptual",
@@ -196,6 +252,20 @@ export const nucleosTematicos = [
       icono: Search,
       descripcion: "Métodos de diagnóstico y medición de la salud organizacional",
       color: "bg-blue-500",
+      competencias: [
+          "Relacionar el cambio con el desarrollo organizacional a través de su manejo en las organizaciones.",
+      ],
+      contenido_programatico: [
+        "Naturaleza de los cambios. y concepto.",
+        "Cambios en el sistema orgánico.",
+        "Cambios en el campo de fuerza.",
+        "El proceso de cambio en las organizaciones.",
+        "Fases del cambio.",
+        "Ciclos del cambio en los sistemas abiertos.",
+        "Cambios y comportamiento humano.",
+        "Resistencia al cambio.",
+        "Requisitos para el cambio planeado eficazmente.",
+      ],
       actividades: [
       {
         tipo: "Mapa Conceptual",
@@ -224,6 +294,20 @@ export const nucleosTematicos = [
       icono: UserCheck,
       descripcion: "Roles y competencias del consultor en DO",
       color: "bg-blue-500",
+      competencias: [
+          "Relacionar el cambio con el desarrollo organizacional a través de su manejo en las organizaciones.",
+      ],
+      contenido_programatico: [
+        "Naturaleza de los cambios. y concepto.",
+        "Cambios en el sistema orgánico.",
+        "Cambios en el campo de fuerza.",
+        "El proceso de cambio en las organizaciones.",
+        "Fases del cambio.",
+        "Ciclos del cambio en los sistemas abiertos.",
+        "Cambios y comportamiento humano.",
+        "Resistencia al cambio.",
+        "Requisitos para el cambio planeado eficazmente.",
+      ],
       actividades: [
       {
         tipo: "Mapa Conceptual",
