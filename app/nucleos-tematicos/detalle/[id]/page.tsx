@@ -82,8 +82,8 @@ export default function NucleoDetalle() {
                       <Image
                         src={actividad.contenido}
                         alt={actividad.tipo}
-                        width={400}
-                        height={300}
+                        width={2400}
+                        height={1800}
                       />
                     )}
 
