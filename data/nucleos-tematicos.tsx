@@ -9,7 +9,7 @@ import {
   UserCheck,
 } from "lucide-react"
 
-export const nucleosTemáticos = [
+export const nucleosTematicos = [
     { 
       id: "introduccion",
       titulo: "Introducción al Desarrollo Organizacional",
