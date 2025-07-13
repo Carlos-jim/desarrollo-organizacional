@@ -43,7 +43,7 @@ export const nucleosTematicos = [
       titulo: "Cambio Organizacional",
       icono: TrendingUp,
       descripcion: "Procesos y gestión del cambio en las organizaciones",
-      color: "bg-yellow-500",
+      color: "bg-blue-500",
       actividades: [
       {
         tipo: "Mapa Conceptual",
@@ -71,7 +71,7 @@ export const nucleosTematicos = [
       titulo: "Fases del Desarrollo Organizacional",
       icono: Target,
       descripcion: "Etapas y metodologías del proceso de desarrollo",
-      color: "bg-orange-500",
+      color: "bg-blue-500",
       actividades: [
       {
         tipo: "Mapa Conceptual",
@@ -99,7 +99,7 @@ export const nucleosTematicos = [
       titulo: "Historia del Desarrollo Organizacional",
       icono: History,
       descripcion: "Evolución histórica y pioneros de la disciplina",
-      color: "bg-red-500",
+      color: "bg-blue-500",
       actividades: [
       {
         tipo: "Mapa Conceptual",
@@ -127,7 +127,7 @@ export const nucleosTematicos = [
       titulo: "Enfoques Clásicos",
       icono: Lightbulb,
       descripcion: "Teorías y enfoques tradicionales del DO",
-      color: "bg-teal-500",
+      color: "bg-blue-500",
       actividades: [
       {
         tipo: "Mapa Conceptual",
@@ -155,7 +155,7 @@ export const nucleosTematicos = [
       titulo: "Estrategias del Desarrollo Organizacional",
       icono: Users,
       descripcion: "Técnicas y herramientas de intervención organizacional",
-      color: "bg-indigo-500",
+      color: "bg-blue-500",
       actividades: [
       {
         tipo: "Mapa Conceptual",
@@ -183,7 +183,7 @@ export const nucleosTematicos = [
       titulo: "Diagnóstico e Investigación",
       icono: Search,
       descripcion: "Métodos de diagnóstico y medición de la salud organizacional",
-      color: "bg-pink-500",
+      color: "bg-blue-500",
       actividades: [
       {
         tipo: "Mapa Conceptual",
@@ -211,7 +211,7 @@ export const nucleosTematicos = [
       titulo: "Funciones del Consultor",
       icono: UserCheck,
       descripcion: "Roles y competencias del consultor en DO",
-      color: "bg-green-500",
+      color: "bg-blue-500",
       actividades: [
       {
         tipo: "Mapa Conceptual",
