@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from "@/components/ui/card";
-import { nucleosTemáticos } from "@/data/nucleos-tematicos"
+import { nucleosTematicos } from "@/data/nucleos-tematicos"
 import { Award } from "lucide-react";
 import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
@@ -36,7 +36,7 @@ export default function EvaluacionPage() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    {nucleosTemáticos.slice(0, 4).map((nucleo, index) => (
+                    {nucleosTematicos.slice(0, 4).map((nucleo, index) => (
                       <div key={nucleo.id} className="flex items-center justify-between p-4 border rounded-lg">
                         <div className="flex items-center">
                           <div className={`w-8 h-8 ${nucleo.color} rounded-full flex items-center justify-center mr-3`}>
