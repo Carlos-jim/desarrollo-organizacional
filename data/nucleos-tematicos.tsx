@@ -16,6 +16,18 @@ export const nucleosTematicos = [
       icono: BookOpen,
       descripcion: "Fundamentos y conceptos básicos del desarrollo organizacional",
       color: "bg-blue-500",
+      competencias: [
+          "Distinguir el contexto del desarrollo organizacional basándose en fundamentos empresariales.",
+      ],
+      contenido_programatico: [
+        "Definición y concepto.",
+        "Perspectivas del desarrollo organizacional: premisas y valores.",
+        "Objetivos básicos.",
+        "Principios del desarrollo organizacional.",
+        "Fuentes que inciden en el desarrollo organizacional.",
+        "Características e importancia del desarrollo organizacional.",
+        "Clima y cultura organizacional."
+      ],
       actividades: [
       {
         tipo: "Mapa Conceptual",

@@ -43,9 +43,20 @@ export default function NucleoDetalle() {
             <CardTitle className="text-3xl font-bold">{nucleo.titulo}</CardTitle>
             <CardDescription className="text-gray-600">{nucleo.descripcion}</CardDescription>
           </CardHeader>
-
           <CardContent>
             <div className="space-y-4">
+              <h3 className="text-xl font-semibold">Competencias</h3>
+              <ul className="list-disc list-inside">
+                {nucleo.competencias?.map((competencia, index) => (
+                  <li key={index}>{competencia}</li>
+                ))}
+              </ul>
+              <h3 className="text-xl font-semibold">Contenido Programático</h3>
+              <ul className="list-disc list-inside">
+                {nucleo.contenido_programatico?.map((contenido, index) => (
+                  <li key={index}>{contenido}</li>
+                ))}
+              </ul>
               <h3 className="text-xl font-semibold">Actividades Interactivas</h3>
               {nucleo.actividades?.map((actividad, index) => (
                 <div key={index} className="border rounded p-4 bg-white shadow mb-4">
