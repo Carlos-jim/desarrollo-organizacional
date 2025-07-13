@@ -10,7 +10,7 @@ import {
   CardContent,
 } from "@/components/ui/card"
 import { ChevronRight } from "lucide-react"
-import { nucleosTemáticos } from "@/data/nucleos-tematicos"
+import { nucleosTematicos } from "@/data/nucleos-tematicos"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -19,7 +19,7 @@ export default function NucleoDetalle() {
   const nucleoId = params?.id as string
   console.log("Nucleo ID:", nucleoId)
 
-  const nucleo = nucleosTemáticos.find((n) => n.id === nucleoId)
+  const nucleo = nucleosTematicos.find((n) => n.id === nucleoId)
 
   if (!nucleo) return <div className="text-center py-10">Núcleo no encontrado</div>
 
