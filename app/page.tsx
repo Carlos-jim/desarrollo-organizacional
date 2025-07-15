@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
@@ -11,9 +12,14 @@ export default function HomePage() {
   return (
     <>
       {activeSection === "inicio" && (
-        <section className="py-20 px-4">
+        <section className="min-h-screen flex items-center justify-center px-4">
           <div className="container mx-auto text-center">
-            <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="max-w-4xl mx-auto"
+            >
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-teal-600 bg-clip-text text-transparent">
                 Desarrollo Organizacional
               </h1>
@@ -33,7 +39,7 @@ export default function HomePage() {
                   </Button>
                 </Link>
               </div>
-            </div>
+            </motion.div>
           </div>
         </section>
       )}

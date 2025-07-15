@@ -29,7 +29,7 @@ export default function NucleoDetalle() {
   return (
     <section className="py-16 px-4">
       <div className="container mx-auto">
-        <Link href="/#nucleos">
+        <Link href="/nucleos-tematicos">
           <Button variant="ghost" className="mb-4">
             <ChevronRight className="mr-2 w-4 h-4 rotate-180" />
             Volver a Núcleos Temáticos

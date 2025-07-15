@@ -9,18 +9,16 @@ export const metadata: Metadata = {
   generator: "CR",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+// app/layout.tsx
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body>
-        <Navbar />
-        {children}
+    <html lang="es">
+      <body className="min-h-screen flex flex-col">
+        <Navbar></Navbar>
+        <main className="flex-grow">{children}</main>
         <Footer />
       </body>
     </html>
   );
 }
+

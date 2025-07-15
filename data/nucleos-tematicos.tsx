@@ -30,7 +30,7 @@ export const nucleosTematicos = [
       ],
       actividades: [
       {
-        tipo: "Mapa Conceptual",
+        tipo: "Diagrama o imagen referencial",
         descripcion: "Mapa del concepto de desarrollo organizacional",
         contenido: "/images/Introduccion-al-desarrollo-organizacional.png",
       },
@@ -72,7 +72,7 @@ export const nucleosTematicos = [
       ],
       actividades: [
       {
-        tipo: "Mapa Conceptual",
+        tipo: "Diagrama o imagen referencial",
         descripcion: "Mapa del concepto de desarrollo organizacional",
         contenido: "/images/gestion-del-cambio-en-las-organizaciones.png",
       },
@@ -114,7 +114,7 @@ export const nucleosTematicos = [
       ],
       actividades: [
       {
-        tipo: "Mapa Conceptual",
+        tipo: "Diagrama o imagen referencial",
         descripcion: "Mapa del concepto de desarrollo organizacional",
         contenido: "/images/fases-del-desarrollo-organizacional.png",
       },
@@ -152,7 +152,7 @@ export const nucleosTematicos = [
       ],
       actividades: [
       {
-        tipo: "Mapa Conceptual",
+        tipo: "Diagrama o imagen referencial",
         descripcion: "Mapa del concepto de desarrollo organizacional",
         contenido: "/images/historia-del-DO.png",
       },
@@ -189,7 +189,7 @@ export const nucleosTematicos = [
       ],
       actividades: [
       {
-        tipo: "Mapa Conceptual",
+        tipo: "Diagrama o imagen referencial",
         descripcion: "Mapa del concepto de desarrollo organizacional",
         contenido: "/images/enfoques-desarrollo-organizacional.png",
       },
@@ -225,7 +225,7 @@ export const nucleosTematicos = [
       ],
       actividades: [
       {
-        tipo: "Mapa Conceptual",
+        tipo: "Diagrama o imagen referencial",
         descripcion: "Mapa del concepto de desarrollo organizacional",
         contenido: "/images/estrategias-del-DO.png",
       },
@@ -263,7 +263,7 @@ export const nucleosTematicos = [
       ],
       actividades: [
       {
-        tipo: "Mapa Conceptual",
+        tipo: "Diagrama o imagen referencial",
         descripcion: "Mapa del concepto de desarrollo organizacional",
         contenido: "/images/diagnostico-organizacional.png",
       },
@@ -305,7 +305,7 @@ export const nucleosTematicos = [
       ],
       actividades: [
       {
-        tipo: "Mapa Conceptual",
+        tipo: "Diagrama o imagen referencial",
         descripcion: "Mapa del concepto de desarrollo organizacional",
         contenido: "/images/Modelo-de-consultoria.png",
       },
