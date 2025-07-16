@@ -17,14 +17,19 @@ import Link from "next/link";
 export default function NucleoDetalle() {
   const params = useParams();
   const nucleoId = params?.id as string;
-  //console.log("Nucleo ID:", nucleoId);
-
   const nucleo = nucleosTematicos.find((n) => n.id === nucleoId);
 
   if (!nucleo)
     return <div className="text-center py-10">Núcleo no encontrado</div>;
 
   const IconComponent = nucleo.icono;
+
+  const extractYouTubeId = (url: string): string | null => {
+    const youtubeRegex =
+      /(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([\w-]{11})/;
+    const match = url.match(youtubeRegex);
+    return match ? match[1] : null;
+  };
 
   return (
     <section className="py-16 px-4">
@@ -58,50 +63,75 @@ export default function NucleoDetalle() {
                   <li key={index}>{competencia}</li>
                 ))}
               </ul>
+
               <h3 className="text-xl font-semibold">Contenido Programático</h3>
               <ul className="list-disc list-inside">
                 {nucleo.contenido_programatico?.map((contenido, index) => (
                   <li key={index}>{contenido}</li>
                 ))}
               </ul>
+
               <h3 className="text-xl font-semibold">
                 Actividades Interactivas
               </h3>
-              {nucleo.actividades?.map((actividad, index) => (
-                <div
-                  key={index}
-                  className="border rounded p-4 bg-white shadow mb-4"
-                >
-                  <h4 className="text-lg font-bold mb-2">{actividad.tipo}</h4>
-                  <p className="text-sm text-gray-600 mb-2">
-                    {actividad.descripcion}
-                  </p>
-                  {typeof actividad.contenido === "string" &&
-                    (actividad.contenido.endsWith(".png") ||
-                      actividad.contenido.endsWith(".jpg")) && (
-                      <Image
-                        src={actividad.contenido}
-                        alt={actividad.tipo}
-                        width={960}
-                        height={720}
-                      />
+              {nucleo.actividades?.map((actividad, index) => {
+                const contenido = actividad.contenido;
+                const youtubeId =
+                  typeof contenido === "string"
+                    ? extractYouTubeId(contenido)
+                    : null;
+
+                return (
+                  <div
+                    key={index}
+                    className="border rounded p-4 bg-white shadow mb-4"
+                  >
+                    <h4 className="text-lg font-bold mb-2">{actividad.tipo}</h4>
+                    <p className="text-sm text-gray-600 mb-2">
+                      {actividad.descripcion}
+                    </p>
+
+                    {typeof contenido === "string" &&
+                      (contenido.endsWith(".png") ||
+                        contenido.endsWith(".jpg")) && (
+                        <Image
+                          src={contenido}
+                          alt={actividad.tipo}
+                          width={960}
+                          height={720}
+                        />
+                      )}
+
+                    {typeof contenido === "string" &&
+                      contenido.endsWith(".mp4") && (
+                        <video controls className="w-full">
+                          <source src={contenido} type="video/mp4" />
+                        </video>
+                      )}
+
+                    {typeof contenido === "string" && youtubeId && (
+                      <div className="w-full aspect-[16/9] h-[600px]">
+                        <iframe
+                          src={`https://www.youtube.com/embed/${youtubeId}`}
+                          title="YouTube video"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="w-full h-full"
+                        ></iframe>
+                      </div>
                     )}
 
-                  {typeof actividad.contenido === "string" &&
-                    actividad.contenido.endsWith(".mp4") && (
-                      <video controls className="w-full">
-                        <source src={actividad.contenido} type="video/mp4" />
-                      </video>
+                    {Array.isArray(contenido) && (
+                      <ul className="list-disc list-inside text-sm mt-2">
+                        {contenido.map((q, i) => (
+                          <li key={i}>{q}</li>
+                        ))}
+                      </ul>
                     )}
-                  {Array.isArray(actividad.contenido) && (
-                    <ul className="list-disc list-inside text-sm mt-2">
-                      {actividad.contenido.map((q, i) => (
-                        <li key={i}>{q}</li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
+                  </div>
+                );
+              })}
             </div>
           </CardContent>
         </Card>
