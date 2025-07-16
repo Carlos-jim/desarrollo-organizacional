@@ -52,7 +52,7 @@ export const nucleosTematicos = [
       {
         tipo: "Simulación",
         descripcion: "Caso interactivo introductorio",
-        contenido: "/videos/simulacion-intro.mp4",
+        contenido: "https://www.youtube.com/watch?v=bMFnO8CQ3qk",
       },
     ],
   },
@@ -98,7 +98,7 @@ export const nucleosTematicos = [
       {
         tipo: "Simulacion",
         descripcion: "Caso interactivo introductorio",
-        contenido: "/videos/simulacion-intro.mp4",
+        contenido: "https://www.youtube.com/watch?v=a1mJWDeCzjg",
       },
     ],
   },
@@ -142,7 +142,7 @@ export const nucleosTematicos = [
       {
         tipo: "Simulación",
         descripcion: "Caso interactivo introductorio",
-        contenido: "/videos/simulacion-intro.mp4",
+        contenido: "https://www.youtube.com/watch?v=QowTaY0mVzo",
       },
     ],
   },
@@ -182,7 +182,7 @@ export const nucleosTematicos = [
       {
         tipo: "Simulación",
         descripcion: "Caso interactivo introductorio",
-        contenido: "/videos/simulacion-intro.mp4",
+        contenido: "https://www.youtube.com/watch?v=fGycs02rfQA",
       },
     ],
   },
@@ -221,7 +221,7 @@ export const nucleosTematicos = [
       {
         tipo: "Simulación",
         descripcion: "Caso interactivo introductorio",
-        contenido: "/videos/simulacion-intro.mp4",
+        contenido: "https://www.youtube.com/watch?v=LqmT4J8m3k4",
       },
     ],
   },
@@ -257,7 +257,7 @@ export const nucleosTematicos = [
       {
         tipo: "Simulación",
         descripcion: "Caso interactivo introductorio",
-        contenido: "/videos/simulacion-intro.mp4",
+        contenido: "https://www.youtube.com/watch?v=wzdlVCSmf_k",
       },
     ],
   },
@@ -295,7 +295,7 @@ export const nucleosTematicos = [
       {
         tipo: "Simulación",
         descripcion: "Caso interactivo introductorio",
-        contenido: "/videos/simulacion-intro.mp4",
+        contenido: "https://www.youtube.com/watch?v=0RMGtT4AraE",
       },
     ],
   },
@@ -337,7 +337,7 @@ export const nucleosTematicos = [
       {
         tipo: "Simulación",
         descripcion: "Caso interactivo introductorio",
-        contenido: "/videos/simulacion-intro.mp4",
+        contenido: "https://www.youtube.com/watch?v=zAUOvpiVZlc",
       },
     ],
   },
