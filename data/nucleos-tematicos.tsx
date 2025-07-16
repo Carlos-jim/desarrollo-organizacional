@@ -1,3 +1,4 @@
+import { url } from "inspector";
 import {
   BookOpen,
   Users,
@@ -17,6 +18,7 @@ export const nucleosTematicos = [
     descripcion:
       "Fundamentos y conceptos básicos del desarrollo organizacional",
     color: "bg-blue-500",
+    url: "evaluacion-introduccion",
     competencias: [
       "Distinguir el contexto del desarrollo organizacional basándose en fundamentos empresariales.",
     ],
@@ -62,6 +64,7 @@ export const nucleosTematicos = [
     icono: TrendingUp,
     descripcion: "Procesos y gestión del cambio en las organizaciones",
     color: "bg-blue-500",
+    url: "evaluacion-cambio",
     competencias: [
       "Relacionar el cambio con el desarrollo organizacional a través de su manejo en las organizaciones.",
     ],
@@ -108,6 +111,7 @@ export const nucleosTematicos = [
     icono: Target,
     descripcion: "Etapas y metodologías del proceso de desarrollo",
     color: "bg-blue-500",
+    url: "evaluacion-fases",
     competencias: [
       "Fases del desarrollo organizaciona",
     ],
@@ -148,6 +152,7 @@ export const nucleosTematicos = [
     icono: History,
     descripcion: "Evolución histórica y pioneros de la disciplina",
     color: "bg-blue-500",
+    url: "evaluacion-historia",
     competencias: [
       "Describir el término de desarrollo organizacional y el papel del ejecutivo de talento humano a través de su historia.",
     ],
