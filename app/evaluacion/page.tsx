@@ -1,44 +1,59 @@
-"use client";
-
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+"use client"
+import { useState } from "react"
+import { CheckCircle, XCircle, Award } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
 import {
   Card,
   CardHeader,
   CardTitle,
-  CardContent,
   CardDescription,
-} from "@/components/ui/card";
-import { nucleosTematicos } from "@/data/nucleos-tematicos";
-import { Award } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
-import Link from "next/link";
-import { Progress } from "@/components/ui/progress";
+  CardContent,
+} from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Progress } from "@/components/ui/progress"
+import Link from "next/link"
+import { nucleosTematicos } from "@/data/nucleos-tematicos"
+import { motion } from "framer-motion"
 
 export default function EvaluacionPage() {
-  const [activeSection, setActiveSection] = useState("inicio");
+  const [activeSection, setActiveSection] = useState("inicio")
+
   return (
-    <>
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Centro de Evaluación</h2>
-            <p className="text-xl text-gray-600">
-              Evalúa tu progreso y recibe retroalimentación personalizada
-            </p>
-          </div>
+    <motion.section
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="py-16 px-4"
+    >
+      <div className="container mx-auto max-w-4xl">
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-4xl font-bold mb-4">Centro de Evaluación</h2>
+          <p className="text-xl text-gray-600">
+            Evalúa tu progreso y recibe retroalimentación personalizada
+          </p>
+        </motion.div>
 
-          <Tabs defaultValue="autoevaluacion" className="w-full">
-            <TabsList className="grid w-full grid-cols-3">
-              <TabsTrigger value="autoevaluacion">Autoevaluación</TabsTrigger>
-              <TabsTrigger value="proyectos">Proyectos</TabsTrigger>
-              <TabsTrigger value="retroalimentacion">
-                Retroalimentación
-              </TabsTrigger>
-            </TabsList>
+        <Tabs defaultValue="autoevaluacion" className="w-full">
+          <TabsList className="grid w-full grid-cols-3">
+            <TabsTrigger value="autoevaluacion">Autoevaluación</TabsTrigger>
+            <TabsTrigger value="proyectos">Proyectos</TabsTrigger>
+            <TabsTrigger value="retroalimentacion">
+              Retroalimentación
+            </TabsTrigger>
+          </TabsList>
 
-            <TabsContent value="autoevaluacion" className="space-y-6">
+          <TabsContent value="autoevaluacion" className="space-y-6">
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+            >
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center">
@@ -48,8 +63,11 @@ export default function EvaluacionPage() {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   {nucleosTematicos.slice(0, 4).map((nucleo, index) => (
-                    <div
+                    <motion.div
                       key={nucleo.id}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.1 }}
                       className="flex items-center justify-between p-4 border rounded-lg"
                     >
                       <div className="flex items-center">
@@ -63,13 +81,19 @@ export default function EvaluacionPage() {
                       <Link href={`/evaluacion/${nucleo.url}`}>
                         <Button size="sm">Iniciar Evaluación</Button>
                       </Link>
-                    </div>
+                    </motion.div>
                   ))}
                 </CardContent>
               </Card>
-            </TabsContent>
+            </motion.div>
+          </TabsContent>
 
-            <TabsContent value="proyectos" className="space-y-6">
+          <TabsContent value="proyectos" className="space-y-6">
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+            >
               <Card>
                 <CardHeader>
                   <CardTitle>Proyectos de Aplicación</CardTitle>
@@ -80,7 +104,12 @@ export default function EvaluacionPage() {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="grid gap-4">
-                    <div className="p-4 border rounded-lg">
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.1 }}
+                      className="p-4 border rounded-lg"
+                    >
                       <h4 className="font-semibold mb-2">
                         Diagnóstico Organizacional
                       </h4>
@@ -94,8 +123,13 @@ export default function EvaluacionPage() {
                           Continuar
                         </Button>
                       </div>
-                    </div>
-                    <div className="p-4 border rounded-lg">
+                    </motion.div>
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.2 }}
+                      className="p-4 border rounded-lg"
+                    >
                       <h4 className="font-semibold mb-2">
                         Plan de Intervención
                       </h4>
@@ -109,13 +143,19 @@ export default function EvaluacionPage() {
                           Iniciar
                         </Button>
                       </div>
-                    </div>
+                    </motion.div>
                   </div>
                 </CardContent>
               </Card>
-            </TabsContent>
+            </motion.div>
+          </TabsContent>
 
-            <TabsContent value="retroalimentacion" className="space-y-6">
+          <TabsContent value="retroalimentacion" className="space-y-6">
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+            >
               <Card>
                 <CardHeader>
                   <CardTitle>Retroalimentación y Progreso</CardTitle>
@@ -156,10 +196,10 @@ export default function EvaluacionPage() {
                   </div>
                 </CardContent>
               </Card>
-            </TabsContent>
-          </Tabs>
-        </div>
-      </section>
-    </>
-  );
+            </motion.div>
+          </TabsContent>
+        </Tabs>
+      </div>
+    </motion.section>
+  )
 }
