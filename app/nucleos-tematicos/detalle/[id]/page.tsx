@@ -17,7 +17,7 @@ import Link from "next/link";
 export default function NucleoDetalle() {
   const params = useParams();
   const nucleoId = params?.id as string;
-  console.log("Nucleo ID:", nucleoId);
+  //console.log("Nucleo ID:", nucleoId);
 
   const nucleo = nucleosTematicos.find((n) => n.id === nucleoId);
 

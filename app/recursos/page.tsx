@@ -81,45 +81,22 @@ export default function Recursos() {
                   border: "border-blue-500 bg-blue-50",
                   heading: "Libros Fundamentales",
                   list: [
-                    "“Organization Development” - French & Bell",
-                    "“Organizational Change” - Burke",
-                    "“The Practice of Management” - Drucker"
+                    "“Desarrollo organizacional principio y aplicaciones” - Guizar Montufar, Rafael.",
+                    "“La persona en el centro del desarrollo organizacional” - Antonio Aguelo y Teresa Coma",
+                    "“Desarrollo organizacional: cultura y cambio” - Jose Ucero"
                   ]
                 },
                 {
                   border: "border-green-500 bg-green-50",
                   heading: "Artículos Académicos",
                   list: [
-                    "Harvard Business Review",
-                    "MIT Sloan Management Review",
-                    "Academy of Management"
+                    "Llamoga Cuenca, S & Morales Salazar, P. (2024). Desarrollo organizacional: una revisión sistemática para Latinoamérica. UCV-SCIENTIA",
+                    "Henry Molina (2000). El desarrollo organizacional como facilitador del cambio",
+                    "Alina Segrado (2015). Desarrollo organizacional. Una mirada desde el ambito academico",
                   ]
                 }
               ]
             },
-            {
-              title: "Organizaciones y Profesionales",
-              blocks: [
-                {
-                  border: "border-purple-500 bg-purple-50",
-                  heading: "Organizaciones Profesionales",
-                  list: [
-                    "Organization Development Network (ODN)",
-                    "International Association of Facilitators",
-                    "Society for Human Resource Management"
-                  ]
-                },
-                {
-                  border: "border-orange-500 bg-orange-50",
-                  heading: "Sitios Web Especializados",
-                  list: [
-                    "OD Practitioner",
-                    "Change Management Institute",
-                    "Organizational Dynamics"
-                  ]
-                }
-              ]
-            }
           ].map((card, i) => (
             <motion.div
               key={card.title}
