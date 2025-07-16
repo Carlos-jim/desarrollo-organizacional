@@ -1,3 +1,4 @@
+import { url } from "inspector";
 import {
   BookOpen,
   Users,
@@ -17,6 +18,7 @@ export const nucleosTematicos = [
     descripcion:
       "Fundamentos y conceptos básicos del desarrollo organizacional",
     color: "bg-blue-500",
+    url: "evaluacion-introduccion",
     competencias: [
       "Distinguir el contexto del desarrollo organizacional basándose en fundamentos empresariales.",
     ],
@@ -62,6 +64,7 @@ export const nucleosTematicos = [
     icono: TrendingUp,
     descripcion: "Procesos y gestión del cambio en las organizaciones",
     color: "bg-blue-500",
+    url: "evaluacion-cambio",
     competencias: [
       "Relacionar el cambio con el desarrollo organizacional a través de su manejo en las organizaciones.",
     ],
@@ -108,19 +111,16 @@ export const nucleosTematicos = [
     icono: Target,
     descripcion: "Etapas y metodologías del proceso de desarrollo",
     color: "bg-blue-500",
+    url: "evaluacion-fases",
     competencias: [
-      "Relacionar el cambio con el desarrollo organizacional a través de su manejo en las organizaciones.",
+      "Fases del desarrollo organizaciona",
     ],
     contenido_programatico: [
-      "Naturaleza de los cambios. y concepto.",
-      "Cambios en el sistema orgánico.",
-      "Cambios en el campo de fuerza.",
-      "El proceso de cambio en las organizaciones.",
-      "Fases del cambio.",
-      "Ciclos del cambio en los sistemas abiertos.",
-      "Cambios y comportamiento humano.",
-      "Resistencia al cambio.",
-      "Requisitos para el cambio planeado eficazmente.",
+      "Diagnóstico inicial.",
+      "Eliminación de barreras.",
+      "Planificación.",
+      "Implementación.",
+      "Evaluación.",
     ],
     actividades: [
       {
@@ -133,10 +133,10 @@ export const nucleosTematicos = [
 
         descripcion: "Preguntas básicas sobre el desarrollo organizacional",
         contenido: [
-          "¿Cómo se relaciona este cambio con el desarrollo organizacional? Explique desde la perspectiva de la naturaleza del cambio",
-          "Identifique tres fuerzas impulsoras y tres restrictivas usando el modelo de campo de fuerzas de Lewin.",
-          "¿Por qué el enfoque de sistemas abiertos es clave aquí? Relaciónelo con los ciclos de cambio.",
-          "¿Cómo el manejo estratégico del cambio impulsa el desarrollo organizacional?",
+          "¿Qué técnicas o herramientas utilizarías en el diagnóstico inicial para identificar las causas raíces?",
+          "dentifica tres barreras comunes en este contexto (ej: comunicación, cultura, falta de capacitación).",
+          "Diseña un plan de acción con al menos 3 actividades prioritarias (ej: retroalimentación 360°, rediseño de roles).",
+          "Explica cómo manejarías riesgos durante la implementación (ej: pilotos, comunicación transparente).",
         ],
       },
       {
@@ -152,6 +152,7 @@ export const nucleosTematicos = [
     icono: History,
     descripcion: "Evolución histórica y pioneros de la disciplina",
     color: "bg-blue-500",
+    url: "evaluacion-historia",
     competencias: [
       "Describir el término de desarrollo organizacional y el papel del ejecutivo de talento humano a través de su historia.",
     ],
@@ -250,8 +251,9 @@ export const nucleosTematicos = [
 
         descripcion: "Preguntas básicas sobre el desarrollo organizacional",
         contenido: [
-          "¿Qué es el desarrollo organizacional?",
-          "¿Cuál es su principal objetivo?",
+          "Defina qué son las estrategias de trabajo en equipo dirigidas a individuos y mencione dos técnicas específicas para fortalecer las habilidades individuales en un equipo.",
+          "Explique la importancia de las estrategias grupales en el desarrollo del trabajo en equipo.",
+          "Compare estrategias para mejorar el trabajo en equipo a nivel estructural (ej: diseño de roles) vs. sistémico (ej: cultura organizacional).",
         ],
       },
       {
@@ -288,8 +290,10 @@ export const nucleosTematicos = [
 
         descripcion: "Preguntas básicas sobre el desarrollo organizacional",
         contenido: [
-          "¿Qué es el desarrollo organizacional?",
-          "¿Cuál es su principal objetivo?",
+          "¿Qué es un estudio de viabilidad en el contexto del desarrollo organizacional y cómo se relaciona con el diagnóstico?",
+          "Describa las cuatro etapas principales para desarrollar un diagnóstico organizacional. ",
+          "Justifique por qué es necesario realizar un diagnóstico antes de implementar cualquier intervención en una organización.",
+          "Defina qué es un diagnóstico organizacional y explique su importancia para medir la salud de una organización.",
         ],
       },
       {
@@ -306,18 +310,17 @@ export const nucleosTematicos = [
     descripcion: "Roles y competencias del consultor en DO",
     color: "bg-blue-500",
     competencias: [
-      "Relacionar el cambio con el desarrollo organizacional a través de su manejo en las organizaciones.",
+      "Consultor de desarrollo organizacional. Visión de la consultoría",
     ],
     contenido_programatico: [
-      "Naturaleza de los cambios. y concepto.",
-      "Cambios en el sistema orgánico.",
-      "Cambios en el campo de fuerza.",
-      "El proceso de cambio en las organizaciones.",
-      "Fases del cambio.",
-      "Ciclos del cambio en los sistemas abiertos.",
-      "Cambios y comportamiento humano.",
-      "Resistencia al cambio.",
-      "Requisitos para el cambio planeado eficazmente.",
+      "El proceso de consultoría.",
+      "Factores que intervienen en el proceso de consultoría.",
+      "El consultor de Desarrollo Organizacional.",
+      "Requisitos de un consultor.",
+      "Roles del consultor.",
+      "Dimensiones de las metas del consultor.",
+      "Principios del consultor. ",
+      "Ética del consultor. ",
     ],
     actividades: [
       {
@@ -330,8 +333,9 @@ export const nucleosTematicos = [
 
         descripcion: "Preguntas básicas sobre el desarrollo organizacional",
         contenido: [
-          "¿Qué es el desarrollo organizacional?",
-          "¿Cuál es su principal objetivo?",
+          "Describa las 4 etapas clave del proceso de consultoría en DO y explique la importancia de cada una",
+          "Compare el rol de un consultor interno vs. externo en DO (ventajas/desventajas).",
+          "Explique cómo las dimensiones de las metas del consultor (ej: organizacionales, individuales) impactan su estrategia."
         ],
       },
       {
