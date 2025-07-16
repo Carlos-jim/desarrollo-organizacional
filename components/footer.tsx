@@ -37,17 +37,16 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold mb-4">Soporte</h4>
+            <h4 className="font-semibold mb-4">Contacto</h4>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li>Centro de Ayuda</li>
-              <li>Tutorías</li>
-              <li>Foros de Discusión</li>
-              <li>Contacto Técnico</li>
+              <li>Email: carlosmjimenezg@gmail.com</li>
+              <li>Email: correoserio29112002@gmail.com</li>
+              <li>Email: antoniachan2002@gmail.com</li>
             </ul>
           </div>
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-          <p>&copy; 2024 Desarrollo Organizacional. Todos los derechos reservados.</p>
+          <p>&copy; 2025 Desarrollo Organizacional. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
