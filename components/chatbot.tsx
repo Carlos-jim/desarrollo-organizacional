@@ -1,61 +1,19 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import { MessageCircle, X } from "lucide-react";
+import { useChatbot } from "@/hooks/useChatbot";
 
 export default function Chatbot() {
   const [open, setOpen] = useState(false);
-  const [messages, setMessages] = useState([
-    {
-      role: "system",
-      content:
-        "Eres un asistente experto en Desarrollo Organizacional. Solo responde preguntas relacionadas con ese tema. Si te preguntan otra cosa, responde educadamente que solo puedes hablar sobre Desarrollo Organizacional.",
-    },
-  ]);
-  const [input, setInput] = useState("");
-  const [loading, setLoading] = useState(false);
-  const bottomRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
-
-  const sendMessage = async () => {
-    if (!input.trim()) return;
-    const newMessages = [...messages, { role: "user", content: input }];
-    setMessages(newMessages);
-    setInput("");
-    setLoading(true);
-
-    try {
-      const response = await fetch("/api/chat", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ messages: newMessages }),
-      });
-
-      const data = await response.json();
-      const reply = data.choices?.[0]?.message;
-      if (reply) {
-        setMessages((prev) => [...prev, reply]);
-      } else if (data.error) {
-        setMessages((prev) => [
-          ...prev,
-          {
-            role: "assistant",
-            content: `Error: ${data.error.message || "No se recibió respuesta."}`,
-          },
-        ]);
-      }
-    } catch {
-      setMessages((prev) => [
-        ...prev,
-        { role: "assistant", content: "Hubo un error al conectar con la API." },
-      ]);
-    } finally {
-      setLoading(false);
-    }
-  };
+  const {
+    messages,
+    input,
+    loading,
+    bottomRef,
+    setInput,
+    sendMessage,
+  } = useChatbot();
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") sendMessage();
@@ -75,7 +33,7 @@ export default function Chatbot() {
       {open && (
         <div className="w-80 sm:w-96 h-[500px] flex flex-col bg-white border shadow-xl rounded-xl overflow-hidden">
           <div className="flex justify-between items-center p-3 bg-blue-600 text-white text-sm font-semibold">
-            Asistente Organizacional
+            Chatbot Organizacional
             <button onClick={() => setOpen(false)} className="hover:text-gray-200">
               <X size={18} />
             </button>
@@ -83,6 +41,7 @@ export default function Chatbot() {
 
           <div className="flex-1 overflow-y-auto p-3 space-y-3">
             {messages.filter((m) => m.role !== "system").map((msg, i) => (
+              
               <div
                 key={i}
                 className={`text-sm whitespace-pre-wrap max-w-[80%] p-2 rounded-lg ${
