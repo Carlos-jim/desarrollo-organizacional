@@ -1,8 +1,10 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import { MessageCircle, X } from "lucide-react";
 
 export default function Chatbot() {
+  const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState([
     {
       role: "system",
@@ -28,16 +30,11 @@ export default function Chatbot() {
     try {
       const response = await fetch("/api/chat", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          messages: newMessages,
-        }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ messages: newMessages }),
       });
 
       const data = await response.json();
-      console.log("API Response:", data);
       const reply = data.choices?.[0]?.message;
       if (reply) {
         setMessages((prev) => [...prev, reply]);
@@ -50,13 +47,10 @@ export default function Chatbot() {
           },
         ]);
       }
-    } catch (err) {
+    } catch {
       setMessages((prev) => [
         ...prev,
-        {
-          role: "assistant",
-          content: "Hubo un error al conectar con la API.",
-        },
+        { role: "assistant", content: "Hubo un error al conectar con la API." },
       ]);
     } finally {
       setLoading(false);
@@ -68,42 +62,61 @@ export default function Chatbot() {
   };
 
   return (
-    <div className="w-full max-w-xl mx-auto border rounded-xl shadow-md p-4 bg-white">
-      <div className="h-96 overflow-y-auto space-y-4 mb-4 px-2 flex flex-col">
-        {messages
-          .filter((m) => m.role !== "system")
-          .map((msg, i) => (
-            <div
-              key={i}
-              className={`p-3 rounded-lg max-w-[80%] whitespace-pre-wrap text-sm ${
-                msg.role === "user"
-                  ? "bg-blue-100 self-end ml-auto"
-                  : "bg-gray-100 self-start"
-              }`}
-            >
-              {msg.content}
-            </div>
-          ))}
-        <div ref={bottomRef} />
-      </div>
-      <div className="flex gap-2">
-        <input
-          type="text"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          onKeyDown={handleKeyDown}
-          placeholder="Haz una pregunta sobre Desarrollo Organizacional..."
-          className="flex-grow px-3 py-2 border rounded-md text-sm focus:outline-none"
-          disabled={loading}
-        />
+    <div className="fixed bottom-4 right-4 z-50">
+      {!open && (
         <button
-          onClick={sendMessage}
-          disabled={loading}
-          className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm hover:bg-blue-700 disabled:opacity-50"
+          onClick={() => setOpen(true)}
+          className="bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700"
         >
-          {loading ? "..." : "Enviar"}
+          <MessageCircle size={24} />
         </button>
-      </div>
+      )}
+
+      {open && (
+        <div className="w-80 sm:w-96 h-[500px] flex flex-col bg-white border shadow-xl rounded-xl overflow-hidden">
+          <div className="flex justify-between items-center p-3 bg-blue-600 text-white text-sm font-semibold">
+            Asistente Organizacional
+            <button onClick={() => setOpen(false)} className="hover:text-gray-200">
+              <X size={18} />
+            </button>
+          </div>
+
+          <div className="flex-1 overflow-y-auto p-3 space-y-3">
+            {messages.filter((m) => m.role !== "system").map((msg, i) => (
+              <div
+                key={i}
+                className={`text-sm whitespace-pre-wrap max-w-[80%] p-2 rounded-lg ${
+                  msg.role === "user"
+                    ? "bg-blue-100 self-end ml-auto"
+                    : "bg-gray-100 self-start"
+                }`}
+              >
+                {msg.content}
+              </div>
+            ))}
+            <div ref={bottomRef} />
+          </div>
+
+          <div className="flex p-2 border-t gap-2">
+            <input
+              type="text"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={handleKeyDown}
+              placeholder="Escribe tu pregunta..."
+              className="flex-1 px-2 py-1 text-sm border rounded-md focus:outline-none"
+              disabled={loading}
+            />
+            <button
+              onClick={sendMessage}
+              disabled={loading}
+              className="bg-blue-600 text-white px-3 py-1 rounded-md text-sm hover:bg-blue-700 disabled:opacity-50"
+            >
+              {loading ? "..." : "Enviar"}
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

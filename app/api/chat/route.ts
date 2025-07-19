@@ -1,65 +1,80 @@
-import { url } from "inspector";
 import { NextRequest, NextResponse } from "next/server";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
 export async function POST(req: NextRequest) {
   const body = await req.json();
   const messages = body.messages;
-  const URL = "https://api-inference.huggingface.co/models/gpt2"
-  
+  const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
+
   if (!messages || !Array.isArray(messages)) {
     return NextResponse.json(
-      { error: "Invalid request, 'messages' field is required." },
+      { error: "Solicitud inválida, se requiere el campo 'messages'." },
       { status: 400 }
     );
   }
 
-  // Concatenamos el contexto para enviar a GPT-2 (que no maneja mensajes formateados)
-  // Puedes adaptar esto para otros modelos que manejen chat.
-  const prompt = messages
-    .filter(m => m.role !== "system") // excluir system si quieres
-    .map(m => (m.role === "user" ? "User: " : "Assistant: ") + m.content)
-    .join("\n") + "\nAssistant:";
-
+  if (!GEMINI_API_KEY) {
+    return NextResponse.json(
+      { error: "Falta la clave de API de Gemini (GEMINI_API_KEY)" },
+      { status: 500 }
+    );
+  }
 
   try {
-    const res = await fetch(
-      URL,
-      {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${process.env.HF_API_KEY}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          inputs: prompt,
-          parameters: {
-            max_new_tokens: 150,
-            temperature: 0.7,
-            top_p: 0.9,
-          },
-        }),
-      }
-    );
+    const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    //const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
 
-    if (!res.ok) {
-      const error = await res.json();
-      return NextResponse.json(error, { status: res.status });
+    const chatMessages = messages
+      .filter((m: any) => m.role === "user" || m.role === "assistant")
+      .map((m: any) => ({
+        role: m.role === "user" ? "user" : "model",
+        parts: [{ text: m.content }],
+      }));
+
+    if (chatMessages.length === 0 || chatMessages[0].role !== "user") {
+      return NextResponse.json(
+        { error: "El primer mensaje del historial debe ser del usuario (role: 'user')." },
+        { status: 400 }
+      );
     }
 
-    const data = await res.json();
+    const chat = model.startChat({
+      history: chatMessages,
+      generationConfig: {
+        maxOutputTokens: 150,
+        temperature: 0.7,
+        topP: 0.9,
+      },
+    });
 
-    // La respuesta de HF para texto es un array [{generated_text: "..."}]
-    const generatedText = data[0]?.generated_text || "";
+    const lastUserMessage = [...messages].reverse().find((m: any) => m.role === "user");
 
-    // Extraemos la respuesta del assistant del texto generado quitando el prompt
-    const answer = generatedText.slice(prompt.length).trim();
+    if (!lastUserMessage) {
+      return NextResponse.json(
+        { error: "No se encontró un mensaje de usuario en la solicitud." },
+        { status: 400 }
+      );
+    }
+
+    // Instrucción para mantener el enfoque en Desarrollo Organizacional
+    const instruction = "Recuerda: solo puedes responder preguntas relacionadas con Desarrollo Organizacional. Si la pregunta no es sobre ese tema, responde educadamente que no puedes ayudar.";
+
+    const result = await chat.sendMessage(instruction + "\n" + lastUserMessage.content);
+    const response = await result.response;
+    const text = response.text();
 
     return NextResponse.json({
-      choices: [{ message: { role: "assistant", content: answer } }],
+      choices: [{ message: { role: "assistant", content: text } }],
     });
-  } catch (error) {
+  } catch (error: any) {
+    console.error("Error en el servidor al conectar con Gemini:", error);
     return NextResponse.json(
-      { error: "Error connecting to Hugging Face API", details: error },
+      {
+        error: "Error al conectar con la API de Gemini",
+        details: error.message,
+        hint: "Asegúrate de que el modelo 'gemini-pro' está disponible para tu clave de API. Usa genAI.listModels() para verificar."
+      },
       { status: 500 }
     );
   }
