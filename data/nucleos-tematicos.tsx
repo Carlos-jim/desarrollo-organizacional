@@ -1,3 +1,4 @@
+import { link } from "fs";
 import { url } from "inspector";
 import {
   BookOpen,
@@ -54,7 +55,14 @@ export const nucleosTematicos = [
       {
         tipo: "Simulación",
         descripcion: "Caso interactivo introductorio",
-        contenido: "/videos/simulacion-intro.mp4",
+        contenido: "https://www.youtube.com/watch?v=bMFnO8CQ3qk",
+      },
+    ],
+    Caso_de_estudio: [
+      {
+        tipo: "Caso de Estudio",
+        descripcion: "El Dilema de la Startup \"InnovaTech\" - Del Garaje al Caos Estructurado",
+        link: "/docs/Contenido 1.pdf"
       },
     ],
   },
@@ -101,7 +109,14 @@ export const nucleosTematicos = [
       {
         tipo: "Simulacion",
         descripcion: "Caso interactivo introductorio",
-        contenido: "/videos/simulacion-intro.mp4",
+        contenido: "https://www.youtube.com/watch?v=a1mJWDeCzjg",
+      },
+    ],
+    Caso_de_estudio: [
+      {
+        tipo: "Caso de Estudio",
+        descripcion: " La Resistencia en \"Manufacturas Clásicas S.A.\" - Un Legado que se Resiste al Futuro",
+        link: "/docs/Contenido 2.pdf"
       },
     ],
   },
@@ -142,7 +157,14 @@ export const nucleosTematicos = [
       {
         tipo: "Simulación",
         descripcion: "Caso interactivo introductorio",
-        contenido: "/videos/simulacion-intro.mp4",
+        contenido: "https://www.youtube.com/watch?v=QowTaY0mVzo",
+      },
+    ],
+    Caso_de_estudio: [
+      {
+        tipo: "Caso de Estudio",
+        descripcion: "La Implementación Fallida del DO en \"Servicios Globales LTDA.\" - Una Intención Perdida en la Ejecución",
+        link: "/docs/Contenido 3.pdf"
       },
     ],
   },
@@ -183,7 +205,14 @@ export const nucleosTematicos = [
       {
         tipo: "Simulación",
         descripcion: "Caso interactivo introductorio",
-        contenido: "/videos/simulacion-intro.mp4",
+        contenido: "https://www.youtube.com/watch?v=fGycs02rfQA",
+      },
+    ],
+    Caso_de_estudio: [
+      {
+        tipo: "Caso de Estudio",
+        descripcion: "El Legado de los \"Grupos T\" en \"Líderes del Futuro\" - Entre la Tradición y la Vanguardia",
+        link: "/docs/Contenido 4.pdf"
       },
     ],
   },
@@ -222,7 +251,14 @@ export const nucleosTematicos = [
       {
         tipo: "Simulación",
         descripcion: "Caso interactivo introductorio",
-        contenido: "/videos/simulacion-intro.mp4",
+        contenido: "https://www.youtube.com/watch?v=LqmT4J8m3k4",
+      },
+    ],
+    Caso_de_estudio: [
+      {
+        tipo: "Caso de Estudio",
+        descripcion: "La Burocracia en \"Corporación Mega\" vs. la Agilidad en \"Startup Ágil\" - Dos Mundos del Diseño Organizacional",
+        link: "/docs/Contenido 5.pdf"
       },
     ],
   },
@@ -259,7 +295,14 @@ export const nucleosTematicos = [
       {
         tipo: "Simulación",
         descripcion: "Caso interactivo introductorio",
-        contenido: "/videos/simulacion-intro.mp4",
+        contenido: "https://www.youtube.com/watch?v=wzdlVCSmf_k",
+      },
+    ],
+    Caso_de_estudio: [
+      {
+        tipo: "Caso de Estudio",
+        descripcion: "Mejorando la Colaboración en \"Equipo Global de Marketing\" - Conectando Mundos Remotos",
+        link: "/docs/Contenido 6.pdf"
       },
     ],
   },
@@ -299,7 +342,14 @@ export const nucleosTematicos = [
       {
         tipo: "Simulación",
         descripcion: "Caso interactivo introductorio",
-        contenido: "/videos/simulacion-intro.mp4",
+        contenido: "https://www.youtube.com/watch?v=0RMGtT4AraE",
+      },
+    ],
+    Caso_de_estudio: [
+      {
+        tipo: "Caso de Estudio",
+        descripcion: "La Necesidad de un Diagnóstico Preciso en \"Hospital Esperanza\" - Más Allá de la Superficie",
+        link: "/docs/Contenido 7.pdf"
       },
     ],
   },
@@ -341,7 +391,14 @@ export const nucleosTematicos = [
       {
         tipo: "Simulación",
         descripcion: "Caso interactivo introductorio",
-        contenido: "/videos/simulacion-intro.mp4",
+        contenido: "https://www.youtube.com/watch?v=zAUOvpiVZlc",
+      },
+    ],
+    Caso_de_estudio: [
+      {
+        tipo: "Caso de Estudio",
+        descripcion: "El Nuevo Consultor en \"Empresas Innovadoras\" - Más Allá de la Teoría",
+        link: "/docs/Contenido 8.pdf"
       },
     ],
   },

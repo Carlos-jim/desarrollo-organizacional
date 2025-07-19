@@ -70,7 +70,6 @@ export default function NucleoDetalle() {
                   <li key={index}>{contenido}</li>
                 ))}
               </ul>
-
               <h3 className="text-xl font-semibold">
                 Actividades Interactivas
               </h3>
@@ -132,6 +131,26 @@ export default function NucleoDetalle() {
                   </div>
                 );
               })}
+                <h3 className="text-xl font-semibold">Caso de estudio</h3>
+                <ul className="list-disc list-inside">
+                {nucleo.Caso_de_estudio?.map((contenido, index) => (
+                  <li key={index}>
+                  {contenido.descripcion}
+                  {contenido.link && (
+                    <span className="ml-2">
+                    <Link
+                      href={contenido.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 underline"
+                    >
+                      Ver caso
+                    </Link>
+                    </span>
+                  )}
+                  </li>
+                ))}
+                </ul>
             </div>
           </CardContent>
         </Card>
