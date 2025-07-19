@@ -94,6 +94,13 @@ export default function Chatbot() {
                 {msg.content}
               </div>
             ))}
+            {loading && (
+              <div className="bg-gray-100 text-sm px-3 py-2 rounded-lg max-w-[60%] animate-pulse">
+                <span className="inline-block w-1.5 h-1.5 bg-gray-500 rounded-full mr-1 animate-bounce"></span>
+                <span className="inline-block w-1.5 h-1.5 bg-gray-500 rounded-full mr-1 animate-bounce delay-150"></span>
+                <span className="inline-block w-1.5 h-1.5 bg-gray-500 rounded-full animate-bounce delay-300"></span>
+              </div>
+            )}
             <div ref={bottomRef} />
           </div>
 
