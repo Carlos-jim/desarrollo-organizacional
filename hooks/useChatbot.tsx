@@ -32,6 +32,7 @@ export function useChatbot() {
       });
 
       const data = await response.json();
+      console.log("Respuesta de la API:", data);
       const reply = data.choices?.[0]?.message;
       if (reply) {
         setMessages((prev) => [...prev, reply]);

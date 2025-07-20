@@ -22,8 +22,8 @@ export async function POST(req: NextRequest) {
 
   try {
     const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-    //const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
+    //const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
     const chatMessages = messages
       .filter((m: any) => m.role === "user" || m.role === "assistant")
@@ -42,7 +42,7 @@ export async function POST(req: NextRequest) {
     const chat = model.startChat({
       history: chatMessages,
       generationConfig: {
-        maxOutputTokens: 150,
+        maxOutputTokens: 1000,
         temperature: 0.7,
         topP: 0.9,
       },
